@@ -46,11 +46,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alliance.cs" />
+    <Compile Include="Build.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Forum.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="News.cs" />
+    <Compile Include="PollVote.cs" />
+    <Compile Include="PollOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Race.cs" />
+    <Compile Include="Reply.cs" />
+    <Compile Include="Skill.cs" />
+    <Compile Include="Topic.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SigmaDraconisClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

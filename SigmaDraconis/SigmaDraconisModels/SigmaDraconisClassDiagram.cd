@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SigmaDraconisModels.User">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.544" />
+  </Class>
+  <Class Name="SigmaDraconisModels.Topic">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Topic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="By" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Replies" />
+      <Property Name="PollOptions" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.Reply">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reply.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="By" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.Forum">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Forum.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Topics" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.Category">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Forums" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.PollOption">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <AssociationLine Name="PollVotes" Type="SigmaDraconisModels.PollVote">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.119" Y="0.414" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PollOption.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PollVotes" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.PollVote">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PollVote.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="By" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SigmaDraconisModels.News">
+    <Position X="7" Y="3" Width="1.5" />
+    <AssociationLine Name="By" Type="SigmaDraconisModels.User">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.565" Y="0.1" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>News.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="By" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SigmaDraconisModels.Character">
+    <Position X="5.5" Y="7.5" Width="1.5" />
+    <AssociationLine Name="User" Type="SigmaDraconisModels.User">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.173" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Class" Type="SigmaDraconisModels.Class" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="8.438" />
+        <Point X="4.875" Y="8.438" />
+        <Point X="4.875" Y="10" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Race" Type="SigmaDraconisModels.Race" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="8.603" />
+        <Point X="6.75" Y="9.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAABAAAAAAAAgAAAAAIAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Character.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Alliance" />
+      <Property Name="Class" />
+      <Property Name="Race" />
+      <Property Name="Build" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SigmaDraconisModels.Build">
+    <Position X="8.5" Y="7.25" Width="1.5" />
+    <AssociationLine Name="BarOne" Type="SigmaDraconisModels.Skill" FixedToPoint="true">
+      <Path>
+        <Point X="10" Y="8.37" />
+        <Point X="11" Y="8.37" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAIEAAAAA=</HashCode>
+      <FileName>Build.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BarOne" />
+      <Property Name="BarTwo" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SigmaDraconisModels.Skill">
+    <Position X="11" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Skill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SigmaDraconisModels.Event">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="SigmaDraconisModels.IEntity">
+    <Position X="11" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SigmaDraconisModels.Alliance">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAQAAAAAAAA=</HashCode>
+      <FileName>Alliance.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SigmaDraconisModels.Class">
+    <Position X="4.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAgIAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SigmaDraconisModels.Race">
+    <Position X="6.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgAAAAAAAAAAABIABBAAAAACAAAAAgAIAAAAIAAAA=</HashCode>
+      <FileName>Race.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
