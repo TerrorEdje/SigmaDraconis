@@ -12,5 +12,16 @@ namespace SigmaDraconisModels
             get;
             set;
         }
+
+        public User User
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
