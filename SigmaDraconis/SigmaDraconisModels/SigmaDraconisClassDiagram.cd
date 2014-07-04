@@ -3,15 +3,25 @@
   <Class Name="SigmaDraconisModels.User">
     <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAEAACAgAAAAASAgAAAAAAAAAAAiAAAAAAAAAQE=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.544" />
+    <Lollipop Orientation="Right" Position="0.521" />
   </Class>
   <Class Name="SigmaDraconisModels.Topic">
     <Position X="5" Y="0.75" Width="1.5" />
+    <AssociationLine Name="Replies" Type="SigmaDraconisModels.Reply" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="1.905" />
+        <Point X="3.5" Y="1.905" />
+        <Point X="3.5" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.786" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAIEgAAAAAQAAAAAAAAAAgAAAAAAAMAAA=</HashCode>
       <FileName>Topic.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -24,22 +34,49 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisModels.Reply">
-    <Position X="3" Y="2.25" Width="1.5" />
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <AssociationLine Name="By" Type="SigmaDraconisModels.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="4.623" />
+        <Point X="3.5" Y="6.063" />
+        <Point X="5.75" Y="6.063" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ReadBy" Type="SigmaDraconisModels.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.343" />
+        <Point X="4.375" Y="3.343" />
+        <Point X="4.375" Y="5.25" />
+        <Point X="5.75" Y="5.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>CAACAAAAAgAAIAgAAAAAACAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Reply.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="By" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReadBy" />
+    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisModels.Forum">
     <Position X="8" Y="0.75" Width="1.5" />
+    <AssociationLine Name="Category" Type="SigmaDraconisModels.Category" FixedToPoint="true">
+      <Path>
+        <Point X="9.5" Y="1.071" />
+        <Point X="11" Y="1.071" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAACAECAA=</HashCode>
       <FileName>Forum.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+    </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Topics" />
     </ShowAsCollectionAssociation>
@@ -48,7 +85,7 @@
   <Class Name="SigmaDraconisModels.Category">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAgAEAAA=</HashCode>
       <FileName>Category.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -64,7 +101,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAgAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PollOption.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -74,6 +111,12 @@
   </Class>
   <Class Name="SigmaDraconisModels.PollVote">
     <Position X="0.75" Y="5.75" Width="1.5" />
+    <AssociationLine Name="By" Type="SigmaDraconisModels.User" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="6.75" />
+        <Point X="5.75" Y="6.75" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PollVote.cs</FileName>
@@ -84,14 +127,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisModels.News">
-    <Position X="7" Y="3" Width="1.5" />
+    <Position X="8.25" Y="3" Width="1.5" />
     <AssociationLine Name="By" Type="SigmaDraconisModels.User">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.565" Y="0.1" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAgAAIEgAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>News.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -134,19 +177,20 @@
   </Class>
   <Class Name="SigmaDraconisModels.Build">
     <Position X="8.25" Y="9.5" Width="1.5" />
-    <AssociationLine Name="BarOne" Type="SigmaDraconisModels.Skill" FixedToPoint="true">
+    <AssociationLine Name="Role" Type="SigmaDraconisModels.Role" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="9.75" Y="10.786" />
-        <Point X="10.75" Y="10.786" />
+        <Point X="9.531" Y="9.5" />
+        <Point X="9.531" Y="8.312" />
+        <Point X="10.75" Y="8.312" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACCAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAIEAAAAA=</HashCode>
+      <HashCode>AAgCCAAAAAAAAAQAEAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Build.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="BarOne" />
-      <Property Name="BarTwo" />
+      <Property Name="SkillBars" />
+      <Property Name="Role" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -174,31 +218,44 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SigmaDraconisModels.LoginLog">
-    <Position X="9" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>LoginLog.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="SigmaDraconisModels.SignUp">
-    <Position X="7.75" Y="7" Width="1.5" />
+    <Position X="7.75" Y="7.5" Width="1.5" />
     <AssociationLine Name="User" Type="SigmaDraconisModels.User" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.75" Y="7.875" />
-        <Point X="6.812" Y="7.875" />
-        <Point X="6.812" Y="6.296" />
+        <Point X="7.75" Y="8.375" />
+        <Point X="6.812" Y="8.375" />
+        <Point X="6.812" Y="8.027" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.619" Y="0.102" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Role" Type="SigmaDraconisModels.Role" FixedToPoint="true">
+      <Path>
+        <Point X="9.25" Y="7.688" />
+        <Point X="10.75" Y="7.688" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAADAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SignUp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="User" />
+      <Property Name="Role" />
     </ShowAsAssociation>
     <Lollipop Position="1.065" />
+  </Class>
+  <Class Name="SigmaDraconisModels.SkillBar">
+    <Position X="9.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SkillBar.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Skills" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="SigmaDraconisModels.IEntity">
     <Position X="11" Y="2.25" Width="1.5" />
@@ -226,6 +283,13 @@
     <TypeIdentifier>
       <HashCode>AACgAAAAAAAAAAABIABBAAAAACAAAAAgAIAAAAIAAAA=</HashCode>
       <FileName>Race.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SigmaDraconisModels.Role">
+    <Position X="10.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAAAAAAAAQ=</HashCode>
+      <FileName>Role.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -22,27 +22,23 @@ namespace SigmaDraconisModels
             get;
             set;
         }
-        public virtual IList<Skill> BarOne
-        {
-            get;
-            set;
-        }
-        public virtual IList<Skill> BarTwo
+
+        public int Id
         {
             get;
             set;
         }
 
-        public int Id
+        public virtual IList<Role> Roles
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
+        }
+
+        public virtual IList<SkillBar> SkillBars
+        {
+            get;
+            set;
         }
     }
 }

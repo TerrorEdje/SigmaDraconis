@@ -5,26 +5,18 @@ using System.Text;
 
 namespace SigmaDraconisModels
 {
-    public class SignUp : IEntity
+    public class SkillBar : IEntity
     {
+
         public int Id
         {
             get;
             set;
         }
-
-        public User User
+        public virtual Skill[] Skills
         {
             get;
             set;
         }
-
-        public Role Role
-        {
-            get;
-            set;
-        }
-
-        
     }
 }

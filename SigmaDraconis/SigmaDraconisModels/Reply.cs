@@ -18,5 +18,31 @@ namespace SigmaDraconisModels
             get;
             set;
         }
+        public int Hidden
+        {
+            get;
+            set;
+        }
+        public string Content
+        { 
+            get; 
+            set; 
+        }
+        public virtual IList<User> ReadBy
+        {
+            get;
+            set;
+        }
+        public DateTime PostedOn
+        {
+            get;
+            set;
+        }
+        public DateTime EditedAt
+        {
+            get;
+            set;
+        }
+
     }
 }

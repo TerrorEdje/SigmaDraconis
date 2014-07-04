@@ -15,14 +15,29 @@ namespace SigmaDraconisModels
 
         public int Id
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
+        }
+
+        public int Hidden
+        {
+            get;
+            set;
+        }
+        public string Title
+        {
+            get;
+            set;
+        }
+        public string Context
+        {
+            get;
+            set;
+        }
+        public DateTime PostedOn
+        {
+            get;
+            set;
         }
     }
 }

@@ -19,6 +19,21 @@ namespace SigmaDraconisModels
             get;
             set;
         }
+        public string Title
+        {
+            get;
+            set;
+        }
+        public int Active
+        {
+            get;
+            set;
+        }
+        public int Hidden
+        {
+            get;
+            set;
+        }
 
         public virtual IList<Reply> Replies
         {
@@ -27,6 +42,11 @@ namespace SigmaDraconisModels
         }
 
         public virtual IList<PollOption> PollOptions
+        {
+            get;
+            set;
+        }
+        public DateTime PostedOn
         {
             get;
             set;

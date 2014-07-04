@@ -5,13 +5,10 @@ using System.Text;
 
 namespace SigmaDraconisModels
 {
-    public class LoginLog : IEntity
+    public enum Role
     {
-
-        public int Id
-        {
-            get;
-            set;
-        }
+        DamageDealer,
+        Healer,
+        Tank
     }
 }

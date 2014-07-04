@@ -13,10 +13,57 @@ namespace SigmaDraconisModels
             get;
             set;
         }
-        public virtual IList<LoginLog> LoginLogs
+        public string Username
         {
             get;
             set;
         }
+        public string Email
+        {
+            get;
+            set;
+        }
+        public string Password
+        {
+            get;
+            set;
+        }
+        public string PasswordTemp
+        {
+            get;
+            set;
+        }
+        public string Code
+        {
+            get;
+            set;
+        }
+        public int Active
+        {
+            get;
+            set;
+        }
+        public string Signature
+        {
+            get;
+            set;
+        }
+        public string Description
+        {
+            get;
+            set;
+        }
+        public string ESOUsername
+        {
+            get;
+            set;
+        }
+
+        public IList<Reply> HasRead
+        {
+            get;
+            set;
+        }
+
     }
 }
