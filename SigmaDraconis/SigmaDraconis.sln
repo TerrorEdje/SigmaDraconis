@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaDraconis", "SigmaDraconis\SigmaDraconis.csproj", "{02F5CA90-95A1-464F-A196-809C29AD122B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaDraconis", "SigmaDraconis\SigmaDraconis.csproj", "{D7925C00-7F34-4C48-9956-0D60A289E953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaDraconisModels", "SigmaDraconisModels\SigmaDraconisModels.csproj", "{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigmaDraconisData", "SigmaDraconisData\SigmaDraconisData.csproj", "{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{02F5CA90-95A1-464F-A196-809C29AD122B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02F5CA90-95A1-464F-A196-809C29AD122B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02F5CA90-95A1-464F-A196-809C29AD122B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02F5CA90-95A1-464F-A196-809C29AD122B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7925C00-7F34-4C48-9956-0D60A289E953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7925C00-7F34-4C48-9956-0D60A289E953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7925C00-7F34-4C48-9956-0D60A289E953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7925C00-7F34-4C48-9956-0D60A289E953}.Release|Any CPU.Build.0 = Release|Any CPU
 		{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}.Release|Any CPU.ActiveCfg = Release|Any CPU
