@@ -26,3 +26,7 @@ C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\bin
 C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\obj\Debug\SigmaDraconis.csprojResolveAssemblyReference.cache
 C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\obj\Debug\SigmaDraconis.dll
 C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\obj\Debug\SigmaDraconis.pdb
+C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\bin\EntityFramework.dll
+C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\bin\EntityFramework.xml
+C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\bin\SigmaDraconisData.dll
+C:\Users\Edwin\SkyDrive\Documenten\SigmaDraconis\SigmaDraconis\SigmaDraconis\bin\SigmaDraconisData.pdb

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
-namespace SigmaDraconisData
+namespace SigmaDraconisData.Models
 {
     public class User : IEntity
     {
@@ -13,6 +14,7 @@ namespace SigmaDraconisData
             get;
             set;
         }
+        [Key]
         public string Username
         {
             get;
@@ -60,6 +62,12 @@ namespace SigmaDraconisData
         }
 
         public IList<Reply> HasRead
+        {
+            get;
+            set;
+        }
+
+        public IList<LoginLog> LoginLogs
         {
             get;
             set;

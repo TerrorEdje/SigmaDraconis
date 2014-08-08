@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sigma Draconis</title>
+</head>
+<body>
+    <ul>
+        <li>@Html.ActionLink("Home","Index","Home")</li>
+        <li>@Html.ActionLink("Register","Register","Account")</li>
+        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+    </ul>
+    @RenderBody()
+</body>
+</html>

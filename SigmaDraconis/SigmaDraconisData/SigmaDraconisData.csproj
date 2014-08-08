@@ -7,8 +7,8 @@
     <ProjectGuid>{305CC71F-2CC5-4CD3-8B3D-E7D3EB37693F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SigmaDraconisModels</RootNamespace>
-    <AssemblyName>SigmaDraconisModels</AssemblyName>
+    <RootNamespace>SigmaDraconisData</RootNamespace>
+    <AssemblyName>SigmaDraconisData</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="DatabaseTest.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\Alliance.cs" />
     <Compile Include="Models\Build.cs" />
     <Compile Include="Models\Category.cs" />
@@ -82,7 +84,6 @@
     </None>
     <None Include="Models\SigmaDraconisClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

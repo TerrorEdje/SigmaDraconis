@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SigmaDraconisData.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SigmaDraconisData.Repositories
 {
-    class UserRepository
+    public class UserRepository
     {
         Context context;
         public UserRepository()
