@@ -9,7 +9,6 @@ namespace SigmaDraconisData.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(SigmaDraconisData.Context context)

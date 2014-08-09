@@ -22,6 +22,8 @@ namespace SigmaDraconisData
 
         public DbSet<Topic> Topics { get; set; }
 
-        public DbSet<Forum> Forums { get; set; } 
+        public DbSet<Forum> Forums { get; set; }
+
+        public DbSet<Rank> Ranks { get; set; } 
     }
 }

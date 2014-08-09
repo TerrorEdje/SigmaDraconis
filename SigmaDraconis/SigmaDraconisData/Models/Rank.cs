@@ -5,45 +5,30 @@ using System.Text;
 
 namespace SigmaDraconisData.Models
 {
-    public class Forum : IEntity
+    public class Rank : IEntity
     {
-
-        public virtual IList<Topic> Topics
-        {
-            get;
-            set;
-        }
-
         public int Id
         {
             get;
             set;
         }
-
-        public virtual Category Category
+        public string Name
         {
             get;
             set;
         }
-
-        public string Description
-        {
-            get;
-            set;
-        }
-
         public string Title
         {
             get;
             set;
         }
-        public int Hidden
+        public IList<Forum> AllowedTo
         {
             get;
             set;
         }
-
-        public IList<Rank> AllowedBy
+        
+        public IList<User> Users
         {
             get;
             set;

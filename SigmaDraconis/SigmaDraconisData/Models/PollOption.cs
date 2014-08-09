@@ -7,7 +7,7 @@ namespace SigmaDraconisData.Models
 {
     public class PollOption : IEntity
     {
-        public virtual IList<PollVote> PollVotes
+        public virtual IList<User> VotedBy
         {
             get;
             set;

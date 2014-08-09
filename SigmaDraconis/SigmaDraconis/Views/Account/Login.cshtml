@@ -9,7 +9,7 @@
 {
     @Html.AntiForgeryToken()
 
-    @Html.ValidationSummary(true)
+    @Html.ValidationSummary(true,"Login failed. Check your login details.")
 
     <div>
         Username
@@ -24,7 +24,7 @@
     </div>
 
     <div>
-        <input type="submit" value="Create" class="btn btn-default" />
+        <input type="submit" value="Login" class="btn btn-default" />
     </div>
 }
 
