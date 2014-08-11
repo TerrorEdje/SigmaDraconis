@@ -15,7 +15,6 @@ namespace SigmaDraconisData.Models
             get;
             set;
         }
-        [Key]
         [Required]
         public string Username
         {
@@ -30,21 +29,18 @@ namespace SigmaDraconisData.Models
             set;
         }
         [Required]
-        [DataType(DataType.Password)]
         public string Password
         {
             get;
             set;
         }
-        [Required]
         [NotMapped]
-        [DataType(DataType.Password)]
+        [Required]
         public string PasswordAgain
         {
             get;
             set;
         }
-        [DataType(DataType.Password)]
         public string PasswordTemp
         {
             get;
@@ -75,13 +71,6 @@ namespace SigmaDraconisData.Models
             get;
             set;
         }
-
-        public IList<Reply> HasRead
-        {
-            get;
-            set;
-        }
-
         public IList<LoginLog> LoginLogs
         {
             get;
@@ -89,6 +78,18 @@ namespace SigmaDraconisData.Models
         }
         public IList<PollOption> VotedFor
         {
+            get;
+            set;
+        }
+
+        public IList<Game> Games
+        {
+            get;
+            set;
+        }
+
+        public Rank Rank
+        { 
             get;
             set;
         }

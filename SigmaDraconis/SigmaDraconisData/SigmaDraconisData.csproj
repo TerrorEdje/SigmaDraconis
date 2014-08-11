@@ -51,11 +51,9 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="DatabaseTest.cs" />
-    <Compile Include="Migrations\201408091125405_NewVoteSystem.cs" />
-    <Compile Include="Migrations\201408091125405_NewVoteSystem.Designer.cs">
-      <DependentUpon>201408091125405_NewVoteSystem.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Application.cs" />
     <Compile Include="Models\LoginLog.cs" />
     <Compile Include="Models\Alliance.cs" />
     <Compile Include="Models\Build.cs" />
@@ -77,6 +75,7 @@
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Rank.cs" />
+    <Compile Include="Models\Reading.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,11 +86,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Models\SigmaDraconisClassDiagram.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201408091125405_NewVoteSystem.resx">
-      <DependentUpon>201408091125405_NewVoteSystem.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

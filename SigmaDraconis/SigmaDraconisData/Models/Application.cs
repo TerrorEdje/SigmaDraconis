@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SigmaDraconisData.Models
 {
-    public class Character : IEntity
+    class Application : IEntity
     {
-        public string Name
+        public int Id
         {
             get;
             set;
@@ -17,32 +18,12 @@ namespace SigmaDraconisData.Models
             get;
             set;
         }
-
-        public Alliance Alliance
+        public string Content
         {
             get;
             set;
         }
-
-        public Class Class
-        {
-            get;
-            set;
-        }
-
-        public Race Race
-        {
-            get;
-            set;
-        }
-
-        public IList<Build> Builds
-        {
-            get;
-            set;
-        }
-
-        public int Id
+        public int Status
         {
             get;
             set;

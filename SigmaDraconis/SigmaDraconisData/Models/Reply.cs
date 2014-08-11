@@ -28,11 +28,6 @@ namespace SigmaDraconisData.Models
             get; 
             set; 
         }
-        public virtual IList<User> ReadBy
-        {
-            get;
-            set;
-        }
         public DateTime PostedOn
         {
             get;

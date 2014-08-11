@@ -25,9 +25,28 @@ namespace SigmaDraconis.Controllers
         {
             if (ModelState.IsValid)
             {
+                bool valid = true;
                 UserRepository userrepo = new UserRepository();
-                userrepo.Add(user);
-                return RedirectToAction("Index","Home");
+                if (!userrepo.NameIsUnique(user.Username))
+                {
+                    valid = false;
+                    ModelState.AddModelError("Username", "Username is not unique");
+                }
+                if (!userrepo.EmailIsUnique(user.Email))
+                {
+                    valid = false;
+                    ModelState.AddModelError("Email", "Email is not unique");
+                }
+                if (user.Password != user.PasswordAgain)
+                {
+                    valid = false;
+                    ModelState.AddModelError("PasswordAgain","Passwords don't match")
+                }
+                if (valid)
+                {
+                    userrepo.Add(user);
+                    return RedirectToAction("Index", "Home");
+                }                
             }
             return View();
         }
@@ -60,8 +79,8 @@ namespace SigmaDraconis.Controllers
         {
             bool isValid = false;
 
-            UserRepository dur = new UserRepository();
-            User myUser = dur.GetByName(username);
+            UserRepository userrep = new UserRepository();
+            User myUser = userrep.GetByName(username);
 
             if (myUser != null)
             {

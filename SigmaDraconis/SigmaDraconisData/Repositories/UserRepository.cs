@@ -40,7 +40,31 @@ namespace SigmaDraconisData.Repositories
 
         public User GetByName(string username)
         {
-            return context.Users.Find(username);
+            return context.Users.SingleOrDefault(u => u.Username == username);
+        }
+        public bool EmailIsUnique(string email)
+        {
+            User user = GetByEmail(email);
+            if (user == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool NameIsUnique(string username)
+        {
+            User user = GetByName(username);
+            if (user == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public User GetByEmail(string email)
+        {
+            return context.Users.SingleOrDefault(u => u.Email == email);
         }
     }
 }

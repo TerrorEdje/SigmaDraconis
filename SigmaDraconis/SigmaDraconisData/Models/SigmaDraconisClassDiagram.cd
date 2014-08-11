@@ -2,47 +2,61 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SigmaDraconisData.Models.User">
     <Position X="5.75" Y="5" Width="1.5" />
-    <AssociationLine Name="HasRead" Type="SigmaDraconisData.Models.Reply" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="LoginLogs" Type="SigmaDraconisData.Models.LoginLog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.75" Y="6.675" />
-        <Point X="2.812" Y="6.675" />
-        <Point X="2.812" Y="4.623" />
+        <Point X="5.75" Y="7.375" />
+        <Point X="5.5" Y="7.375" />
+        <Point X="5.5" Y="8.75" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.9" Y="1.852" />
+        <Position X="0.058" Y="0.477" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="VotedFor" Type="SigmaDraconisData.Models.PollOption" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="5.75" Y="7.062" />
-        <Point X="1.312" Y="7.062" />
+        <Point X="5.75" Y="6.563" />
+        <Point X="1.312" Y="6.563" />
         <Point X="1.312" Y="2.046" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.089" Y="4.07" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="Games" Type="SigmaDraconisData.Game" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="7.188" />
+        <Point X="3.812" Y="7.188" />
+        <Point X="3.812" Y="8.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.713" Y="1.039" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACCAEAICAgAAAAASAgAAAAAAAAAABiAAAAAAAAAQE=</HashCode>
+      <HashCode>QAADCAAAACAgAAAAASAgAAAAAAAAAABiAAAAAAAAAQE=</HashCode>
       <FileName>Models\User.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="LoginLogs" />
-      <Property Name="HasRead" />
       <Property Name="VotedFor" />
+      <Property Name="Games" />
     </ShowAsCollectionAssociation>
     <Lollipop Orientation="Right" Position="0.668" />
   </Class>
   <Class Name="SigmaDraconisData.Models.Topic">
     <Position X="5" Y="0.75" Width="1.5" />
-    <AssociationLine Name="Replies" Type="SigmaDraconisData.Models.Reply" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="By" Type="SigmaDraconisData.Models.User">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.442" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Replies" Type="SigmaDraconisData.Models.Reply" FixedFromPoint="true">
       <Path>
-        <Point X="5" Y="1.905" />
-        <Point X="3.5" Y="1.905" />
-        <Point X="3.5" Y="2.75" />
+        <Point X="5" Y="1.938" />
+        <Point X="4" Y="1.938" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.786" Y="0.11" />
+        <Position X="0.256" Y="-0.192" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -59,35 +73,24 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisData.Models.Reply">
-    <Position X="2.5" Y="2.75" Width="1.5" />
+    <Position X="2.5" Y="1.75" Width="1.5" />
     <AssociationLine Name="By" Type="SigmaDraconisData.Models.User" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4" Y="3.875" />
-        <Point X="4.375" Y="3.875" />
-        <Point X="4.375" Y="5.411" />
-        <Point X="5.75" Y="5.411" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ReadBy" Type="SigmaDraconisData.Models.User" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="3.375" Y="4.623" />
-        <Point X="3.375" Y="6.293" />
-        <Point X="5.75" Y="6.293" />
+        <Point X="3" Y="3.623" />
+        <Point X="3" Y="6" />
+        <Point X="5.75" Y="6" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="1.548" Y="0.133" />
+        <Position X="1.725" Y="0.081" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>CAACAAAAAgAAIAgAAAAAACAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAACAAAAAgAAIAgAAAAAACAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Models\Reply.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="By" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="ReadBy" />
-    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisData.Models.Forum">
@@ -132,8 +135,8 @@
     <AssociationLine Name="VotedBy" Type="SigmaDraconisData.Models.User" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="1.5" Y="2.046" />
-        <Point X="1.5" Y="6.939" />
-        <Point X="5.75" Y="6.939" />
+        <Point X="1.5" Y="6.375" />
+        <Point X="5.75" Y="6.375" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="3.433" Y="0.654" />
@@ -168,7 +171,7 @@
     <Position X="5" Y="10.75" Width="1.5" />
     <AssociationLine Name="User" Type="SigmaDraconisData.Models.User">
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.173" Y="0.133" />
+        <Position X="-0.556" Y="0.216" />
       </MemberNameLabel>
     </AssociationLine>
     <AssociationLine Name="Class" Type="SigmaDraconisData.Models.Class" FixedFromPoint="true" FixedToPoint="true">
@@ -193,8 +196,10 @@
       <Property Name="Alliance" />
       <Property Name="Class" />
       <Property Name="Race" />
-      <Property Name="Build" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Builds" />
+    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisData.Models.Build">
@@ -226,10 +231,21 @@
   </Class>
   <Class Name="SigmaDraconisData.Models.Event">
     <Position X="10.75" Y="6.25" Width="1.5" />
-    <AssociationLine Name="SignUps" Type="SigmaDraconisData.Models.SignUp">
+    <AssociationLine Name="SignUps" Type="SigmaDraconisData.Models.SignUp" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="7.375" />
+        <Point X="8.703" Y="7.375" />
+        <Point X="8.703" Y="8.75" />
+      </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.005" Y="1.445" />
+        <Position X="-1.047" Y="1.445" />
       </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CreatedBy" Type="SigmaDraconisData.Models.User" FixedFromPoint="true">
+      <Path>
+        <Point X="10.75" Y="6.562" />
+        <Point X="7.25" Y="6.562" />
+      </Path>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAACAAAEAAAAAAAAABAAAAAAAAAAAAAAAAAAE=</HashCode>
@@ -283,7 +299,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SigmaDraconisData.Models.LoginLog">
-    <Position X="3" Y="7.5" Width="1.5" />
+    <Position X="4.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Models\LoginLog.cs</FileName>
@@ -305,6 +321,40 @@
       <Property Name="AllowedTo" />
     </ShowAsCollectionAssociation>
     <Lollipop Orientation="Left" Position="0.227" />
+  </Class>
+  <Class Name="SigmaDraconisData.Models.Reading">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <AssociationLine Name="User" Type="SigmaDraconisData.Models.User">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.568" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Reading.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Reply" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.679" />
+  </Class>
+  <Class Name="SigmaDraconisData.Models.Application">
+    <Position X="1.75" Y="6.75" Width="1.5" />
+    <AssociationLine Name="User" Type="SigmaDraconisData.Models.User" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="6.938" />
+        <Point X="5.75" Y="6.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADAAAEAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Application.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Left" Position="0.414" />
   </Class>
   <Interface Name="SigmaDraconisData.Models.IEntity">
     <Position X="10.75" Y="2.5" Width="1.5" />
@@ -339,6 +389,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAEAAAAAAAAQ=</HashCode>
       <FileName>Models\Role.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SigmaDraconisData.Game">
+    <Position X="2.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAABAA=</HashCode>
+      <FileName>Game.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
