@@ -1,4 +1,4 @@
-﻿@model SigmaDraconisData.Models.User
+﻿@model SigmaDraconis.Models.LoginUser
 @{
     ViewBag.Title = "Login";
 }
@@ -9,12 +9,12 @@
 {
     @Html.AntiForgeryToken()
 
-    @Html.ValidationSummary(true,"Login failed. Check your login details.")
+    @Html.ValidationSummary(true,"")
 
     <div>
-        Username
-        @Html.TextBoxFor(model => model.Username)
-        @Html.ValidationMessageFor(model => model.Username)
+        Email
+        @Html.TextBoxFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
     </div>
 
     <div>

@@ -26,6 +26,31 @@ namespace SigmaDraconisData.Repositories
             context.SaveChanges();
         }
 
+        public void SaveChanges()
+        {
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException dbEx)
+            {
+                Exception raise = dbEx;
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        string message = string.Format("{0}:{1}",
+                            validationErrors.Entry.Entity.ToString(),
+                            validationError.ErrorMessage);
+                        // raise a new exception nesting
+                        // the current instance as InnerException
+                        raise = new InvalidOperationException(message, raise);
+                    }
+                }
+                throw raise;
+            }
+        }
+
         public bool Delete(string username)
         {
             User user = context.Users.Find(username);
@@ -65,6 +90,11 @@ namespace SigmaDraconisData.Repositories
         public User GetByEmail(string email)
         {
             return context.Users.SingleOrDefault(u => u.Email == email);
+        }
+
+        public User GetByCode(string code)
+        {
+            return context.Users.SingleOrDefault(u => u.Code == code);
         }
     }
 }
